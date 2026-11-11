@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>If I Fits solved</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1F3A3D}a:hover{color:#0F2426}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #DDEBEA; font-family: Nunito, system-ui, sans-serif; color: #1F3A3D; display: flex; flex-direction: column; overflow: hidden">
+<svg width="390" height="360" viewBox="0 40 390 360" role="img" aria-label="The shoebox with its lid nearly closed. Phoebus's sleepy eyes peer out from the gap, one paw draped over the edge and his tail curling out the side.">
+<ellipse cx="215" cy="352" rx="160" ry="26" fill="#1F3A3D" opacity="0.1"></ellipse>
+<polygon points="75,180 235,260 235,320 75,240" fill="#E06A47"></polygon>
+<polygon points="235,260 355,200 355,260 235,320" fill="#C4553A"></polygon>
+<polygon points="75,180 235,260 355,200 355,190 235,228 75,168" fill="#3A1E18"></polygon>
+<ellipse cx="216" cy="238" rx="7" ry="3.2" fill="#E8D36A"></ellipse>
+<ellipse cx="246" cy="236" rx="7" ry="3.2" fill="#E8D36A"></ellipse>
+<path d="M209 236 q7 -3 14 0 M239 234 q7 -3 14 0" stroke="#3A1E18" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+<path d="M330 204 C 352 214, 372 200, 366 180 C 362 168, 350 170, 352 180" stroke="{{coat}}" stroke-width="11" fill="none" stroke-linecap="round"></path>
+<polygon points="195,116 355,190 235,228 75,168" fill="#F2F0EA"></polygon>
+<polygon points="75,168 235,228 235,236 75,176" fill="#D8D4CA"></polygon>
+<polygon points="235,228 355,190 355,198 235,236" fill="#C9C4B8"></polygon>
+<path d="M135 142 L295 210" stroke="#E06A47" stroke-width="6" opacity="0.5"></path>
+<g transform="translate(150 224)">
+<ellipse cx="0" cy="0" rx="18" ry="10" fill="{{coat}}"></ellipse>
+<path d="M-8 4 v4 M0 5 v4 M8 4 v4" stroke="{{stripe}}" stroke-width="2" stroke-linecap="round"></path>
+</g>
+<g font-family="Fredoka, sans-serif" font-weight="600" fill="#1F3A3D">
+<text x="288" y="130" font-size="20">z</text>
+<text x="304" y="108" font-size="26">z</text>
+<text x="326" y="80" font-size="34">z</text>
+</g>
+</svg>
+<div style="padding: 4px 24px 0; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
+<div style="display: flex; gap: 8px" role="img" aria-label="3 of 3 stars">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="#F0A53A" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"></path></svg>
+<svg width="48" height="48" viewBox="0 0 24 24" fill="#F0A53A" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"></path></svg>
+<svg width="40" height="40" viewBox="0 0 24 24" fill="#F0A53A" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"></path></svg>
+</div>
+<h1 style="margin: 0; font-family: Fredoka, sans-serif; font-weight: 700; font-size: 46px; line-height: 1.05">It fits. He sits.</h1>
+<p style="margin: 0; font-size: 16px; color: #4E6A6C">4 moves · Squish unused · Lid closed (mostly)</p>
+</div>
+<div style="margin: 22px 24px 0; padding: 16px; border-radius: 20px; background: #FFFFFF; display: flex; align-items: center; gap: 16px">
+<span style="flex: none; width: 72px; height: 72px; border-radius: 16px; background: #DDEBEA; display: flex; align-items: center; justify-content: center">
+<span style="display: grid; grid-template-columns: repeat(4, 12px); grid-auto-rows: 12px; gap: 2px">
+<sc-for list="{{cells}}" as="c" hint-placeholder-count="8">
+<span style="width: 12px; height: 12px; border-radius: 3px; background: {{c}}"></span>
+</sc-for>
+</span>
+</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #4E6A6C">New pose</span>
+<span style="font-family: Fredoka, sans-serif; font-size: 22px; font-weight: 600">The Croissant</span>
+<span style="font-size: 14px; color: #4E6A6C">Wraps round corners. Needs a curved spot.</span>
+</div>
+</div>
+<div style="margin-top: auto; padding: 0 24px 32px; display: flex; gap: 12px">
+<button type="button" style="flex: 1; height: 56px; border-radius: 28px; border: 2px solid #1F3A3D; background: transparent; color: #1F3A3D; display: flex; align-items: center; justify-content: center; gap: 8px; font-family: Nunito, sans-serif; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3A3D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
+Snapshot
+</button>
+<a href="Fits-Spots.dc.html" style="flex: 1.6; height: 56px; border-radius: 28px; background: #1F3A3D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: Fredoka, sans-serif; font-size: 19px; font-weight: 600; text-decoration: none">Next spot</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"coat":{"editor":"color","default":"#E08A3C","options":["#E08A3C","#2B2B2E","#9A9AA2","#F2EDE4"]},"stripe":{"editor":"color","default":"#B5612A"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const coat = this.props.coat ?? '#E08A3C';
+const cells = [1,0,0,1, 1,1,1,1].map((v) => (v ? coat : 'transparent'));
+return { coat, stripe: this.props.stripe ?? '#B5612A', cells };
+}
+}
+</script>
+</body>
+</html>

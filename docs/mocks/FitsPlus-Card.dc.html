@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Liquid, share card</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1F3A3D}a:hover{color:#0F2426}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #1F3A3D; font-family: Nunito, system-ui, sans-serif; color: #1F3A3D; display: flex; flex-direction: column; overflow: hidden">
+<div style="margin: 36px 32px 0; padding: 14px 14px 18px; background: #FFFFFF; border-radius: 6px; transform: rotate(-2deg); display: flex; flex-direction: column; gap: 12px">
+<svg width="100%" height="300" viewBox="0 0 298 300" role="img" aria-label="Photo-style card: Phoebus fills a green salad bowl perfectly, eyes closed, with a rubber stamp reading If I fits I sits.">
+<rect x="0" y="0" width="298" height="300" fill="#F2E3CC"></rect>
+<rect x="0" y="210" width="298" height="90" fill="#E2CFB2"></rect>
+<ellipse cx="149" cy="250" rx="120" ry="18" fill="#C9B494"></ellipse>
+<path d="M44 172 C 44 120, 96 104, 149 104 C 202 104, 254 120, 254 172 Z" fill="{{coat}}"></path>
+<path d="M110 118 q8 16 0 32 M149 112 q8 18 0 36 M188 118 q8 16 0 32" stroke="{{stripe}}" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.7"></path>
+<path d="M78 120 L72 84 L102 108 Z M124 104 L148 80 L150 118 Z" fill="{{coat}}"></path>
+<path d="M96 134 q7 6 14 0 M126 134 q7 6 14 0" stroke="#1F3A3D" stroke-width="3.5" fill="none" stroke-linecap="round"></path>
+<ellipse cx="149" cy="172" rx="110" ry="20" fill="#9FC79A"></ellipse>
+<path d="M39 172 Q46 246 149 250 Q252 246 259 172 Q149 200 39 172 Z" fill="#6FA86A"></path>
+<g transform="rotate(-12 220 60)">
+<rect x="160" y="36" width="124" height="52" rx="6" fill="none" stroke="#C4553A" stroke-width="3.5"></rect>
+<text x="222" y="58" text-anchor="middle" font-family="Fredoka, sans-serif" font-size="14" font-weight="700" fill="#C4553A">IF I FITS</text>
+<text x="222" y="78" text-anchor="middle" font-family="Fredoka, sans-serif" font-size="14" font-weight="700" fill="#C4553A">I SITS · 100%</text>
+</g>
+</svg>
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<span style="font-family: Fredoka, sans-serif; font-size: 22px; font-weight: 600">Phoebus × Salad bowl</span>
+<span style="font-size: 13px; color: #4E6A6C">11 Nov</span>
+</div>
+<div style="display: flex; gap: 14px; font-size: 14px; color: #4E6A6C">
+<span>Fit <b style="color: #1F3A3D">100%</b></span>
+<span>Spill <b style="color: #1F3A3D">0</b></span>
+<span>Smug <b style="color: #1F3A3D">max</b></span>
+</div>
+</div>
+<div style="margin: 28px 24px 0; padding: 14px 16px; border-radius: 18px; background: #2B4B4F; color: #E7F1F0; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #B7CFCD">Friends' cats · salad bowl</span>
+<div style="display: flex; justify-content: space-between; font-size: 15px"><span><b>1</b>&nbsp;&nbsp;Phoebus</span><b>100%</b></div>
+<div style="display: flex; justify-content: space-between; font-size: 15px"><span><b>2</b>&nbsp;&nbsp;Mochi</span><span>96%</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 15px"><span><b>3</b>&nbsp;&nbsp;Sir Reginald</span><span>71% (too big)</span></div>
+</div>
+<div style="margin-top: auto; padding: 0 24px 32px; display: flex; gap: 12px">
+<a href="FitsPlus-Atlas.dc.html" style="flex: 1; height: 56px; border-radius: 28px; border: 2px solid #4E7276; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; text-decoration: none">Atlas</a>
+<button type="button" style="flex: 1.6; height: 56px; border-radius: 28px; border: none; background: #F0A53A; color: #1F3A3D; font-family: Fredoka, sans-serif; font-size: 19px; font-weight: 600">Send to a friend</button>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"coat":{"editor":"color","default":"#E08A3C","options":["#E08A3C","#2B2B2E","#9A9AA2","#F2EDE4"]},"stripe":{"editor":"color","default":"#B5612A"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { coat: this.props.coat ?? '#E08A3C', stripe: this.props.stripe ?? '#B5612A' };
+}
+}
+</script>
+</body>
+</html>
