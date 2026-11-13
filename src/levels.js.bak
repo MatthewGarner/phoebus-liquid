@@ -1,0 +1,32 @@
+// The rooms. A level = { id, name, hint, container: {id, x, y}, cat: {x, y, facing}, platforms: [{x, y, w}], props: [{type, x, y}], par }.
+// World: x in [-5, 5] (the side walls bounce him), floor at y = 0. A shelf's y is its top surface; the container's y is what it stands on;
+// the cat's x is the middle of him and his y the surface he sits on; a prop's y is the surface it sits on. No three/DOM imports.
+// Positions were tuned with scripts/solve.mjs: every level is completable within par + 1 leaps.
+export const LEVELS = [
+  { id: 1, name: 'Warm-up', hint: 'A gentle lob.', par: 1,
+    container: { id: 'salad', x: 2.0, y: 0 }, cat: { x: -2.6, y: 0, facing: 1 }, platforms: [], props: [] },
+  { id: 2, name: 'Drop in', hint: 'Down from the shelf.', par: 1,
+    container: { id: 'teacup', x: -2.0, y: 0 }, cat: { x: 2.4, y: 6, facing: -1 }, platforms: [{ x: 2.4, y: 6, w: 5.2 }], props: [] },
+  { id: 3, name: 'Up we go', hint: 'Leap up. Come down in.', par: 1,
+    container: { id: 'pot', x: 2.0, y: 2.0 }, cat: { x: -2.4, y: 0, facing: 1 }, platforms: [{ x: 2.0, y: 2.0, w: 5.0 }], props: [] },
+  { id: 4, name: 'The neck', hint: 'Come down steep.', par: 2,
+    container: { id: 'vase', x: 2.2, y: 0 }, cat: { x: -3, y: 0, facing: 1 }, platforms: [], props: [] },
+  { id: 5, name: 'Stepping stones', hint: 'Mind the mugs.', par: 2,
+    container: { id: 'teacup', x: 2.3, y: 6.4 }, cat: { x: 2.6, y: 0, facing: -1 },
+    platforms: [{ x: 2.3, y: 6.4, w: 4.8 }, { x: -2.6, y: 3.2, w: 4.4 }], props: [{ type: 'mug', x: -1.2, y: 3.2 }, { type: 'mug', x: -3.4, y: 3.2 }] },
+  { id: 6, name: 'Roadblock', hint: 'Under it, or off the wall.', par: 2,
+    container: { id: 'fishbowl', x: 2.5, y: 3.6 }, cat: { x: -3, y: 0, facing: 1 },
+    platforms: [{ x: 2.5, y: 3.6, w: 4.6 }, { x: 3.2, y: 11.2, w: 3.6 }], props: [] },
+  { id: 7, name: 'Low ceiling', hint: 'Flat and fast.', par: 2,
+    container: { id: 'pot', x: 2.4, y: 0 }, cat: { x: -3.2, y: 0, facing: 1 }, platforms: [{ x: 2.4, y: 6.0, w: 5.6 }], props: [] },
+  { id: 8, name: 'The long climb', hint: 'Shelf, shelf, vase.', par: 3,
+    container: { id: 'vase', x: -2.6, y: 8.0 }, cat: { x: -2.6, y: 2.8, facing: 1 },
+    platforms: [{ x: -2.6, y: 2.8, w: 4.4 }, { x: 2.6, y: 5.4, w: 4.4 }, { x: -2.6, y: 8.0, w: 4.4 }], props: [] },
+  { id: 9, name: 'Crowded', hint: 'Clear the shelf with your face.', par: 2,
+    container: { id: 'teacup', x: 2.8, y: 4.4 }, cat: { x: -2.8, y: 0, facing: 1 },
+    platforms: [{ x: 2.0, y: 4.4, w: 6 }], props: [{ type: 'yarn', x: -0.4, y: 4.4 }, { type: 'orange', x: 0.3, y: 4.4 }, { type: 'mug', x: -0.5, y: 0 }] },
+  { id: 10, name: 'Penthouse', hint: 'Knock everything off. Then fit.', par: 3,
+    container: { id: 'fishbowl', x: 2.4, y: 7.2 }, cat: { x: -2.8, y: 0, facing: 1 },
+    platforms: [{ x: 2.6, y: 2.6, w: 4.4 }, { x: -2.6, y: 4.6, w: 4.4 }, { x: 2.4, y: 7.2, w: 4.6 }],
+    props: [{ type: 'orange', x: 1.0, y: 2.6 }, { type: 'mug', x: 3.9, y: 2.6 }, { type: 'plant', x: -3.9, y: 4.6 }, { type: 'yarn', x: -1.3, y: 4.6 }] },
+];
